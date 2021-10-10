@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackgroundTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQb-aM-dxb">
+                                <rect key="frame" x="94" y="74" width="226.5" height="66"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tn-Ry-Fdi">
+                                <rect key="frame" x="0.0" y="166" width="207" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="START"/>
+                                <connections>
+                                    <action selector="startStopAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pfi-wz-neu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2V-W6-lDM">
+                                <rect key="frame" x="207" y="166" width="207" height="60"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="RESET"/>
+                                <connections>
+                                    <action selector="resetAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vbH-uA-wL1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3tn-Ry-Fdi" firstAttribute="width" secondItem="g2V-W6-lDM" secondAttribute="width" id="1M2-7b-wWU"/>
+                            <constraint firstItem="g2V-W6-lDM" firstAttribute="leading" secondItem="3tn-Ry-Fdi" secondAttribute="trailing" id="42h-6D-Y5N"/>
+                            <constraint firstItem="3tn-Ry-Fdi" firstAttribute="top" secondItem="EQb-aM-dxb" secondAttribute="bottom" constant="26" id="Iqf-a0-j8f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="g2V-W6-lDM" secondAttribute="trailing" id="OBG-be-Qps"/>
+                            <constraint firstItem="g2V-W6-lDM" firstAttribute="centerY" secondItem="3tn-Ry-Fdi" secondAttribute="centerY" id="Spd-WA-yKN"/>
+                            <constraint firstItem="EQb-aM-dxb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="b5I-qb-Lom"/>
+                            <constraint firstItem="3tn-Ry-Fdi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cLO-dj-sNT"/>
+                            <constraint firstItem="EQb-aM-dxb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cfH-Ts-mTa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="resetButton" destination="g2V-W6-lDM" id="Z04-yH-gSC"/>
+                        <outlet property="startStopButton" destination="3tn-Ry-Fdi" id="zRb-ix-dBK"/>
+                        <outlet property="timeLabel" destination="EQb-aM-dxb" id="iH7-8W-v3H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
